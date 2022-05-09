@@ -1,0 +1,15 @@
+{
+	"manifest_version": 2,
+	"name": "Not your business",
+	"version": "1.0",
+	"description": "Prevents 4anime from redirecting you to front page whenever devtools are opened.",
+	"icons": {},
+	"content_scripts": [
+		{
+			"matches": ["*://4anime.gg/*", "*://rapid-cloud.ru/*"],
+			"js": ["nyb.js"],
+			"run_at": "document_start",
+			"all_frames": true
+		}
+	]
+}
